@@ -1,0 +1,10 @@
+<!--
+    Document   : fr_nnachit_jitsi.xml
+    Author     : Nabil NACHIT <nabil.nachit@gmail.com>
+    Description:
+        Create a jitsi meet url and add to the email body
+-->
+<zimlet name="fr_beezim_jitsi" version="1.0" encoding="UTF-8" description="Jitsi Meet Zimlet" label="Jitsi Meet Zimlet">
+    <include>fr_beezim_jitsi.js</include>
+    <handlerObject>fr_beezim_jitsi</handlerObject>
+</zimlet>
