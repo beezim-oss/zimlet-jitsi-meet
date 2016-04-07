@@ -58,6 +58,9 @@ function(jitsiURL) {
 Jitsi.prototype._doInsertURL =
 function(params, composeView) {
     var separator = "\r\n";
+    if ((this._composeMode == Dwt.HTML)) {
+        separator = "</br>";
+    }
     if (composeView.__internalId.indexOf("APPT") >= 0) {
         composeView.getHtmlEditor().setContent([params.currentBodyContent, separator, params.URL].join(""));
     }
