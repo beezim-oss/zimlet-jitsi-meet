@@ -15,7 +15,12 @@ Jitsi.prototype.init = function() {
 Jitsi.prototype.initializeToolbar = function(app, toolbar, controller, view) {
     // Add a jitsi button to the toolbar if current view is COMPOSE or APPT
     if (view.indexOf("COMPOSE") >= 0 || view.indexOf("APPT") >=0 ) {
-        var buttonIndex = 9;
+
+        if (toolbar.getOp("JITSI")) {
+			return;
+		}
+
+        var buttonIndex = 5;
         var buttonArgs = {
             text: "Jitsi meet", //TODO: String should be in the properties file
             tooltip: "Create a Jitsi meet URL", //TODO: String should be in the properties file
