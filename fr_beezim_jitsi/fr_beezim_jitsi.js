@@ -43,11 +43,12 @@ Jitsi.prototype._insertURL =
 function(jitsiURL) {
     var cc = appCtxt.getCurrentView();
     var currentEditorMode = cc.getComposeMode();
+    var URL;
     if (currentEditorMode == "text/html") {
-        var URL = "<a href=" + jitsiURL + " data-mce-href=" + jitsiURL + ">Click Here to join the meeting</a>"; //TODO: String should be in the properties file
+        URL = "<a href=" + jitsiURL + " data-mce-href=" + jitsiURL + ">Click Here to join the meeting</a>"; //TODO: String should be in the properties file
     }
     else {
-        var URL = jitsiURL;
+        URL = jitsiURL;
     }
 	var composeView = appCtxt.getCurrentView();
 	var currentBodyContent = currentBodyContent = appCtxt.getCurrentView().getHtmlEditor().getContent();
