@@ -35,7 +35,7 @@ Jitsi.prototype.initializeToolbar = function(app, toolbar, controller, view) {
 
 Jitsi.prototype._createJitsiURL = function() {
     var string = this._getRandomValue();
-    var URL = "https://meet.jit.si/"; //TODO: String should be in the properties file
+    var URL = this.getUserProperty("JistiURL");
     var jitsiURL = URL + string;
     this._insertURL(jitsiURL);
 };
