@@ -22,8 +22,8 @@ Jitsi.prototype.initializeToolbar = function(app, toolbar, controller, view) {
 
         var buttonIndex = 5;
         var buttonArgs = {
-            text: "Jitsi meet", //TODO: String should be in the properties file
-            tooltip: "Create a Jitsi meet URL", //TODO: String should be in the properties file
+            text: this.getMessage("JitsiButtonText"),
+            tooltip: this.getMessage("JitsiButtonTooltip"),
             index: buttonIndex,
             image: "zimbraicon",
             enabled: true
@@ -50,7 +50,8 @@ function(jitsiURL) {
     var currentEditorMode = cc.getComposeMode();
     var URL;
     if (currentEditorMode == "text/html") {
-        URL = "<a href=" + jitsiURL + " data-mce-href=" + jitsiURL + ">Click Here to join the meeting</a>"; //TODO: String should be in the properties file
+        var clickHere = this.getMessage("JitsiClickHere");
+        URL = "<a href=" + jitsiURL + " data-mce-href=" + jitsiURL + ">" + clickHere + "</a>";
     }
     else {
         URL = jitsiURL;
