@@ -69,9 +69,9 @@ function(params, composeView) {
         separator = "</br>";
     }
     if (composeView.__internalId.indexOf("APPT") >= 0) {
-        composeView.getHtmlEditor().setContent([params.currentBodyContent, separator, params.URL].join(""));
+        composeView.getHtmlEditor().setContent([params.URL, separator, params.currentBodyContent].join(""));
     }
     else {
-        composeView._htmlEditor.setContent([params.currentBodyContent, separator, params.URL].join(""));
+        composeView._htmlEditor.setContent([params.URL, separator, params.currentBodyContent].join(""));
     }
 };
