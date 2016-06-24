@@ -8,9 +8,5 @@ To install the Jitsi-meet-Zimlet you can follow theses steps :
     chmod +x install.sh  
     ./install.sh  
 
-##### Todo List
-1. Move the fixed values to the properties files  
-2. Translate the zimlet  
-3. More to come##### Install the Jitsi-meet-Zimlet  
-
-This software is released under the terms of the GPL v2. See the included LICENCE.TXT for details.
+This software is released under the terms of the GPL v2.
+See the included LICENCE.TXT for details.
